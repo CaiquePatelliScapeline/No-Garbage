@@ -65,6 +65,7 @@ export class CreateAdvertising1626876748697 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
+        await queryRunner.dropTable("advertising");
     }
 
 }
