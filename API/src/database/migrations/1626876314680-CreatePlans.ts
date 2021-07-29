@@ -13,7 +13,7 @@ export class CreatePlans1626876314680 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: "plan",
+                        name: "name",
                         type: "varchar",
                     },
                     {
