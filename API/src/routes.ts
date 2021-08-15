@@ -29,6 +29,7 @@ router.post("/login" , authenticateCollectionPointController.handle); //Autentic
 router.post("/admin-login", authenticateAdministratorController.handle) //Autenticação de administrador
 router.post("/collectionpoints", createCollectionPointController.handle); //Criação de pontos de coleta
 router.post("/administrators", createAdministratorController.handle); //Criação de administrador
+router.post("/administrators", ensureAuthenticated, ensureAdmin, createAdministratorController.handle); //Criação de administrador
 
 router.get("/collectionpoints", listCollectionPointController.handle); //Listar pontos de coleta
 router.get("/administrators", ensureAuthenticated, ensureAdmin, listAdminitratorsController.handle);
