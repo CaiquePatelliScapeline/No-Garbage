@@ -21,10 +21,6 @@ export class CreateAdministrators1626874220424 implements MigrationInterface {
                         type: "varchar",
                     },
                     {
-                        name: "admin_level",
-                        type: "varchar",
-                    },
-                    {
                         name: "created_at",
                         type: "timestamp",
                         default: "now()",

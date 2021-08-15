@@ -13,13 +13,28 @@ export class CreateCollectionPoints1626875301485 implements MigrationInterface {
                         isPrimary: true,
                     },
                     {
-                        name: "id_clients",
-                        type: "uuid",
-
+                        name: "corporate_name",
+                        type: "varchar",
                     },
                     {
-                        name: "id_cupons",
-                        type: "uuid",
+                        name: "cnpj",
+                        type: "varchar",
+                    },
+                    {
+                        name: "email",
+                        type: "varchar",
+                    },
+                    {
+                        name: "password",
+                        type: "varchar",
+                    },
+                    {
+                        name: "phone",
+                        type: "varchar",
+                    },
+                    {
+                        name: "responsible",
+                        type: "varchar",
                     },
                     {
                         name: "image_url",
@@ -42,24 +57,6 @@ export class CreateCollectionPoints1626875301485 implements MigrationInterface {
                         name: "updated_at",
                         type: "timestamp",
                         default: "now()",
-                    },
-                ],
-                foreignKeys: [
-                    {
-                        name: "FKClientId",
-                        referencedTableName: "clients",
-                        referencedColumnNames: ["id"],
-                        columnNames: ["id_clients"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL",
-                    },
-                    {
-                        name: "FKCuponId",
-                        referencedTableName: "cupons",
-                        referencedColumnNames: ["id"],
-                        columnNames: ["id_cupons"],
-                        onDelete: "SET NULL",
-                        onUpdate: "SET NULL",
                     },
                 ],
             })

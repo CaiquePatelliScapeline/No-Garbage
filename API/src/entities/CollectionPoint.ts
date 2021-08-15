@@ -1,7 +1,6 @@
-import {Column, CreateDateColumn, Entity, JoinColumn, ManyToOne, OneToOne, PrimaryColumn, UpdateDateColumn} from "typeorm";
+import { Exclude } from "class-transformer";
+import {Column, CreateDateColumn, Entity, PrimaryColumn, UpdateDateColumn} from "typeorm";
 import { v4 as uuid } from "uuid";
-import { Client } from "./Client";
-import { Cupon } from "./Cupon";
 
 @Entity("collection_points")
 class CollectionPoint {
@@ -9,18 +8,23 @@ class CollectionPoint {
     readonly id: string;
 
     @Column()
-    id_clients: string;
-
-    @JoinColumn({name: "id_clients"})
-    @ManyToOne(() => Client)
-    idClient: Client;
+    corporate_name: string;
 
     @Column()
-    id_cupons: string;
+    cnpj: string;
 
-    @JoinColumn({name: "id_cupons"})
-    @OneToOne(() => Cupon)
-    idCupon: Cupon;
+    @Column()
+    email: string;
+
+    @Exclude()
+    @Column()
+    password: string;
+
+    @Column()
+    phone: string;
+
+    @Column()
+    responsible: string;
 
     @Column()
     image_url: string;

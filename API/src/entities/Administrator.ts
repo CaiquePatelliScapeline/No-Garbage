@@ -14,9 +14,6 @@ class Administrator {
     @Column()
     password: string;
 
-    @Column()
-    admin_level: string;
-
     @CreateDateColumn()
     created_at: Date;
 
