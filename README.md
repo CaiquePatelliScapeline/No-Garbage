@@ -13,6 +13,8 @@ No Garbage é um marketplace para conectar usuários que se preocupam com o desc
   <img src="./assets/web/PointsDetails.svg" height="250px" width="48%"/>
 </a>
 
+---
+
 ## 🧰 Principais Ferramentas
 * Node.js
 * TypeScript
@@ -20,6 +22,8 @@ No Garbage é um marketplace para conectar usuários que se preocupam com o desc
 * SQLite
 * CORS
 * JWT
+
+---
 
 ## 📝 Licença
 Este projeto está sob a licença [MIT](./LICENSE)
